@@ -16,7 +16,8 @@ M2 = kit.servo[9].angle = 90
 M3 = kit.servo[10].angle = 90   
 M4 = kit.servo[13].angle = 90    
 
-servo.angle == 90'''
+# servo.angle == 90
+
 def set_speed(speed, motor):
 	kit.servo[motor].angle = speed
 	return
@@ -71,16 +72,115 @@ A1.run()
 """
 while(1):
 	# left/right
-	M2.setSpeed(90)
-	M2.run()	
-	print('M2 =',M2.speed)
-#	time.sleep(2)
+	A4.setSpeed(90)
+	A4.run()	
+	print('A4 =',A4.speed)
+	time.sleep(1)
 """
 
 
 # test all forward thrsuters
+# this alternates A thruster speeds every 3 seconds
+# adjust the while loop if it needs to alternate more or less
 """
 # time.sleep(180)
+while True:
+	fast = 0
+	while fast <= 4:
+		print("fast")
+		A1.setSpeed(103)
+		A1.run()	
+		print('A1 =',A1.speed)
+
+		A3.setSpeed(103)
+		A3.run()	
+		print('A3 =',A3.speed)
+
+		M1.setSpeed(100)
+		M1.run()	
+		print('M1 =',M1.speed)
+
+		M4.setSpeed(100)
+		M4.run()	
+		print('M4 =',M4.speed)
+
+		# keeps it from floating up
+		A4.setSpeed(102)
+		A4.run()	
+		print('A4 =',A4.speed)
+		A2.setSpeed(102)
+		A2.run()	
+		print('A2 =',A2.speed)
+		
+		print("\n")
+		fast += 1
+		time.sleep(1)
+
+	slow = 0
+	while slow <= 4:
+		print("slow")
+		A1.setSpeed(102)
+		A1.run()	
+		print('A1 =',A1.speed)
+
+		A3.setSpeed(102)
+		A3.run()	
+		print('A3 =',A3.speed)
+
+		M1.setSpeed(100)
+		M1.run()	
+		print('M1 =',M1.speed)
+
+		M4.setSpeed(100)
+		M4.run()	
+		print('M4 =',M4.speed)
+
+		# keeps it from floating up
+		A4.setSpeed(102)
+		A4.run()	
+		print('A4 =',A4.speed)
+		A2.setSpeed(102)
+		A2.run()	
+		print('A2 =',A2.speed)
+		
+		print("\n")
+		slow += 1
+		time.sleep(1)
+"""
+
+
+# run all thrsuters ran above
+"""
+while True:
+	A1.setSpeed(103)
+	A1.run()	
+	print('A1 =',A1.speed)
+
+	A3.setSpeed(103)
+	A3.run()	
+	print('A3 =',A3.speed)
+
+	M1.setSpeed(100)
+	M1.run()	
+	print('M1 =',M1.speed)
+
+	M4.setSpeed(100)
+	M4.run()	
+	print('M4 =',M4.speed)
+
+	A4.setSpeed(102)
+	A4.run()	
+	print('A4 =',A4.speed)
+
+	A2.setSpeed(102)
+	A2.run()	
+	print('A2 =',A2.speed)
+	
+	print("\n")
+"""
+
+# stop all thrsuters ran above
+
 while True:
 	A1.setSpeed(90)
 	A1.run()	
@@ -97,10 +197,16 @@ while True:
 	M4.setSpeed(90)
 	M4.run()	
 	print('M4 =',M4.speed)
+
+	A4.setSpeed(90)
+	A4.run()	
+	print('A4 =',A4.speed)
+
+	A2.setSpeed(90)
+	A2.run()	
+	print('A2 =',A2.speed)
 	
 	print("\n")
-"""
-
 
 # test all up thrusters
 # we currently have no up thrusters, A2 is now down
@@ -114,22 +220,21 @@ while True:
 	print("\n")
 """
 
-
-# test all down thrusters
 """
+# test all down thrusters
 #down
 while True:
-	A4.setSpeed(90)
+	A4.setSpeed(98)
 	A4.run()	
 	print('A4 =',A4.speed)
 
-	A2.setSpeed(90)
+	A2.setSpeed(98)
 	A2.run()	
 	print('A2 =',A2.speed)
 	
 	print("\n")
- """
 
+"""
 
 # I am not sure why this is here    -Alex
 #kit.servo[0].angle = 95

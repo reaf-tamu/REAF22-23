@@ -11,7 +11,7 @@ def talker():
 	pub = rospy.Publisher("Pressure", String, queue_size=10)
 	rospy.init_node("pressure_sensor", anonymous = True)
 	while not rospy.is_shutdown():
-		with open('/home/reafauv2017/Desktop/auv/REAF20-21/bar02/pressure_sensor_pub.csv', 'r') as file: # change path
+		with open('/home/reafauv2017/Desktop/auv/REAF22-23/competition/PressSensCSV.csv', 'r') as file:
 			reader =  csv.reader(file)
 			for row in reader:
 				data = str(row)

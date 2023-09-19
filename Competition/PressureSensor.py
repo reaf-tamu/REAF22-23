@@ -31,7 +31,7 @@ sensor.setFluidDensity(1000) # kg/m^3
 # writes freshwater depth to a csv file
 # NOTE: this code writes over the same first row each time so there will only be one value of data in the file
 while(True):
-	with open('pressure_sensor_pub.csv','w') as f:
+	with open('PressSensCSV.csv','w') as f:
 		writer = csv.writer(f)
 		# row = [pressure,temp,freshwaterDepth,saltwaterDepth]
 		row = [freshwaterDepth]

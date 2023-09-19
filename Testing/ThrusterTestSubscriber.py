@@ -75,6 +75,12 @@ A1.setSpeed(90)
 A1.run()
 
 
+# code with sugested fixes
+# congrats: what needs to work works so I am leaving this for later
+
+
+# code that did not work when disconnected
+"""
 while not rospy.is_shutdown():
 	# test switch
 	while mission_switch == False: #checking if mission switch is on
@@ -139,8 +145,9 @@ while not rospy.is_shutdown():
 
 		M4.setSpeed(90)
 		M4.run()
+"""
 
-
+# original code, simplified above to determine issue
 """
 while not rospy.is_shutdown():
 	# test switch
